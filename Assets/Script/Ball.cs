@@ -4,9 +4,13 @@ public class Ball : MonoBehaviour
 {
     public float speed = 8f;
     private Vector2 direction;
+    public AudioClip paddleSound; // Son de rebond sur une raquette
+    public AudioClip wallSound;   // Son de rebond sur un mur
 
+    private AudioSource audioSource;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>(); // Récupère l'AudioSource de la balle
         ResetBall();
     }
 
@@ -22,10 +26,12 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag == "Paddle")
         {
             direction.x = -direction.x; // Inverse la direction en x
+            audioSource.PlayOneShot(paddleSound); // Joue le son de rebond sur une raquette
         }
         else if (collision.gameObject.tag == "Wall")
         {
             direction.y = -direction.y; // Inverse la direction en y
+            audioSource.PlayOneShot(wallSound); // Joue le son de rebond sur un mur
         }
     }
 
