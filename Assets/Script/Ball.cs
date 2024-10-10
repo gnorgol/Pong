@@ -33,10 +33,18 @@ public class Ball : MonoBehaviour
             direction.y = -direction.y; // Inverse la direction en y
             audioSource.PlayOneShot(wallSound); // Joue le son de rebond sur un mur
         }
+        if (collision.gameObject.tag == "PlayerGoal")
+        {
+            GameManager.Instance.AIScores();
+        }
+        else if (collision.gameObject.tag == "AIGoal")
+        {
+            GameManager.Instance.PlayerScores();
+        }
     }
 
     // Remet la balle au centre avec une nouvelle direction
-    private void ResetBall()
+    public void ResetBall()
     {
         transform.position = Vector2.zero; // Centre de l'écran
         direction = new Vector2(Random.Range(0, 2) == 0 ? -1 : 1, Random.Range(-1f, 1f)).normalized;
