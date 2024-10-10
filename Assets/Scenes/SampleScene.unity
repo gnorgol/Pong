@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 392282340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.92, z: 0}
+  m_LocalPosition: {x: 0, y: 6.36, z: 0}
   m_LocalScale: {x: 19.53, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -362,10 +362,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 93410959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.9, y: 0.8}
+  m_AnchorMin: {x: 0.8, y: 0.8}
   m_AnchorMax: {x: 1, y: 0.9}
-  m_AnchoredPosition: {x: -225, y: -105}
-  m_SizeDelta: {x: -450, y: 210}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428579500
 MonoBehaviour:
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 11
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553c90ce890e92c4280c6e33de2ce38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
 --- !u!65 &483801936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -578,7 +578,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.98, y: 1.08, z: 0}
-  m_LocalScale: {x: 0.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f19d109a7a4094898d1b8ca68cb7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 70
   ball: {fileID: 1749027995}
   smoothFactor: 0.1
 --- !u!65 &1140016112
@@ -996,7 +996,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.9, y: 1.08, z: 0}
-  m_LocalScale: {x: 0.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1035,7 +1035,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cffc4d49cbf2ec41a9ff8a46f54896e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  initialSpeed: 12
+  maxSpeed: 25
+  speedIncrease: 0.5
+  paddleBounceAngleFactor: 0.5
+  currentSpeed: 0
   paddleSound: {fileID: 8300000, guid: 22d74810b00c5a042b812bf3f52a8f5d, type: 3}
   wallSound: {fileID: 8300000, guid: dcea238f2eb8ca54aac1e63a31a302b2, type: 3}
 --- !u!65 &1749027992
@@ -1342,9 +1346,9 @@ RectTransform:
   m_Father: {fileID: 93410959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.8}
-  m_AnchorMax: {x: 1, y: 0.9}
-  m_AnchoredPosition: {x: -225, y: 49.5}
-  m_SizeDelta: {x: -450, y: -99}
+  m_AnchorMax: {x: 0.3, y: 0.9}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039956791
 MonoBehaviour:
@@ -1610,7 +1614,7 @@ Transform:
   m_GameObject: {fileID: 2133677867}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.14, z: 0}
+  m_LocalPosition: {x: 0, y: -4.42, z: 0}
   m_LocalScale: {x: 19.53, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

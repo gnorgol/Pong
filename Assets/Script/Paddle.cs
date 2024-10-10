@@ -11,7 +11,7 @@ public class Paddle : MonoBehaviour
         transform.Translate(0, move, 0);
 
         // Limiter le mouvement des raquettes à l'écran
-        float yPos = Mathf.Clamp(transform.position.y, -4.5f, 4.5f);
+        float yPos = Mathf.Clamp(transform.position.y, -4f, 6f);
         transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
     }
 }
