@@ -31,7 +31,10 @@ public class CreditManager : MonoBehaviour
         if (CreditPanel.activeSelf)
         {
             HideCreditPanel();
-            Time.timeScale = 1;
+            if (GameManager.Instance.isGameStarted)
+            {
+                Time.timeScale = 1;
+            }
         }
         else
         {

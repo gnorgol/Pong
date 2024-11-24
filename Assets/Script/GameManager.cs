@@ -15,8 +15,13 @@ public class GameManager : MonoBehaviour
     private int aiScore = 0;
     public static GameManager Instance { get; private set; }
 
+    public Button startGameButton;
+
+    public bool isGameStarted = false;
+
     private void Start()
     {
+        startGameButton.onClick.AddListener(StartGame);
         ResetGame();
     }
     private void Awake()
@@ -29,6 +34,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    private void Update()
+    {
+         
     }
 
     public void PlayerScores()
@@ -63,6 +72,12 @@ public class GameManager : MonoBehaviour
         aiScore = 0;
         UpdateScoreUI();
         ResetBall();
+    }
+    private void StartGame()
+    {
+        Time.timeScale = 1;
+        isGameStarted = true;
+        startGameButton.gameObject.SetActive(false);
     }
 
 }

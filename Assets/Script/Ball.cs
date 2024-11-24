@@ -22,13 +22,16 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        // Déplacement de la balle avec la vitesse actuelle
-        transform.Translate(direction * currentSpeed * Time.deltaTime);
-
-        // Augmentation progressive de la vitesse (jusqu'à un maximum)
-        if (currentSpeed < maxSpeed)
+        if (GameManager.Instance.isGameStarted)
         {
-            currentSpeed += speedIncrease * Time.deltaTime;
+            // Déplacement de la balle avec la vitesse actuelle
+            transform.Translate(direction * currentSpeed * Time.deltaTime);
+
+            // Augmentation progressive de la vitesse (jusqu'à un maximum)
+            if (currentSpeed < maxSpeed)
+            {
+                currentSpeed += speedIncrease * Time.deltaTime;
+            }
         }
     }
 
